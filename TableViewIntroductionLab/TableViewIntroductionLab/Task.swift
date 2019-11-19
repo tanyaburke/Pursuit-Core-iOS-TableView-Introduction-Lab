@@ -63,5 +63,9 @@ struct Task {
                  dueDate: dateFormatter.date(from: "04-13-2020")!),
         ]
     }
-
+   
+    
+    static let inProgressData = Task.allTasks.filter({$0.status == .inProgress})
+  static let notStartedData = Task.allTasks.filter({$0.status == .notStarted})
+   static let completedData = Task.allTasks.filter({$0.status == .completed})
 }
